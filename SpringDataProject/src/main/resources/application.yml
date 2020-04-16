@@ -1,7 +1,7 @@
 spring:
     datasource:
         driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/test
+        url: jdbc:mysql://localhost:3306/advertisement
         username: root
         password: root
 
@@ -11,4 +11,4 @@ spring:
         
         hibernate:
             ddl-auto: update
-            dialect: org.hibernate.dialect.MySQLDialect
+            dialect: org.hibernate.dialect.MySQL5Dialect

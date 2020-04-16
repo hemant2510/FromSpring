@@ -27,7 +27,7 @@ public class UserController {
 		return registrationService.save(user);
 	}
 	
-	@GetMapping(value="/user",produces=MediaType.APPLICATION_JSON_VALUE, consumes=MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value="/user",produces=MediaType.APPLICATION_JSON_VALUE)
 	public User getUserById(@RequestHeader(name="auth-token") String authToken) {
 			return registrationService.getUserById(authToken);
 	}

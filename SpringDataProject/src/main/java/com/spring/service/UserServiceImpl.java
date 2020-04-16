@@ -50,5 +50,10 @@ public class UserServiceImpl implements UserService {
 		UserEntity userEntity = userRepository.findBySessionID(apiKey).get(0);
 		return UserUtils.convertUserEntityToUser(userEntity);
 	}
+	
+	public UserEntity isValidToken(String authToken) {
+		return userRepository.findBySessionID(authToken).get(0);
+		
+	}
 
 }

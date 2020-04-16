@@ -1,16 +1,22 @@
 package com.spring.entity;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "USERS_MASTER")
 public class UserEntity {
 
-	@GeneratedValue
+	
 	@Id
 	@Column(name="ID")
 	private int id;
@@ -36,6 +42,14 @@ public class UserEntity {
 	@Column(name = "PHONE")
 	private int phone;
 	
+	@OneToMany
+	@JoinColumn(name="user_entity_id")
+	private Set<AdvertisementEntity> advertisementEntity;
+	
+	@OneToMany
+	@JoinColumn(name="user_entity_id")
+	private Set<MessageEntity> messageEntity;
+	
 	public UserEntity() {}
 
 	public UserEntity(int id,String sessionID, String firstName, String lastName, String userName, String password,
@@ -49,6 +63,14 @@ public class UserEntity {
 		this.password = password;
 		this.email = email;
 		this.phone = phone;
+	}
+
+	public Set<MessageEntity> getMessageEntity() {
+		return messageEntity;
+	}
+
+	public void setMessageEntity(Set<MessageEntity> messageEntity) {
+		this.messageEntity = messageEntity;
 	}
 
 	public int getId() {
@@ -114,10 +136,41 @@ public class UserEntity {
 	public void setPhone(int phone) {
 		this.phone = phone;
 	}
+	
+	public Set<AdvertisementEntity> getAdvertisementEntity() {
+		return advertisementEntity;
+	}
+
+	public void setAdvertisementEntity(Set<AdvertisementEntity> advertisementEntity) {
+		this.advertisementEntity = advertisementEntity;
+	}
 
 	@Override
 	public String toString() {
 		return "UserEntity [sessionID=" + sessionID + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", userName=" + userName + ", email=" + email + ", phone=" + phone + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UserEntity other = (UserEntity) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+	
 }
