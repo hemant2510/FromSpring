@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Project</title>
+	<!-- JQuery API -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<!-- Icons -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<!-- Bootstrap css framework -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Bootstrap JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container"> <a class="navbar-brand text-primary" href="#">
+        <i class="fa d-inline fa-lg fa-stop-circle"></i>
+        <b class="text-light">POSTIT!</b>
+      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar4">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">FAQ</a> </li>
+        </ul> <a class="btn navbar-btn ml-md-2 btn-light">Contact us</a>
+      </div>
+    </div>
+  </nav>
+	<div class="container" >
+	<div class="row justify-content-center text-center" >
+        <div class="col-md-6">
+          <h1 class="" style="font-family:courier; margin-top: 70px;" >Log In</h1>
+        </div>
+      </div>
+		<div class="row justify-content-center ">
+		
+			<div class="col-md-4 rounded border border-dark" style="padding: 20px; background-color: #D3D3D3; margin-top: 10px;"  id="check" >
+				<div class="form-group">
+		    		<label for="username">Username :</label>
+		    		<input type="text" class="form-control shadow-lg" placeholder="Enter username" id="username" >
+		  		</div>
+
+		  		<div class="form-group">
+		   			<label for="pwd">Password:</label>
+		    		<input type="password" class="form-control shadow-lg" placeholder="Enter password" id="pwd">
+		  		</div>
+				<div class="form-group form-check">
+		    		<label class="form-check-label">
+		      		<input class="form-check-input" type="checkbox"> Remember me
+		    		</label>
+		  		</div>
+		  		<div class="col-md-6 justify-content-center " ><a class="btn btn-info btn-md active text-center btn-block " href="Profile.html" style="margin-left: 85px;" >Submit</a></div><br>
+		  		<span class="form-group">
+		  			If you dont have an account.<a href="SignUp.html">Click here</a></span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
