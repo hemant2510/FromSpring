@@ -17,8 +17,8 @@ export let armstrong={
                         num=Math.floor(num/10);
                         sum=sum+(a*a*a);
                     }
-                    //console.log("Sum : ",sum);
-                    //console.log("Dummy ",dummy);
+                    console.log("Sum : ",sum);
+                    console.log("Dummy ",dummy);
                     if(sum==dummy){
                         //console.log("insdie if")
                         flag=true;
