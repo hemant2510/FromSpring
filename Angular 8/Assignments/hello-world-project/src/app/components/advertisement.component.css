@@ -1,0 +1,21 @@
+
+#outer-div {
+    width: 100%; 
+    text-align: center; 
+    }
+
+#inner-div {
+    display: inline-block; 
+    margin-left: 0px;
+    padding: 1px;
+    text-align: center;
+    }
+
+#formInput {
+    margin-left: 530px;
+}
+
+#table{
+    margin-top: 50px;
+    margin-left: 530px;
+}

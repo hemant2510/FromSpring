@@ -7,6 +7,7 @@ import {message} from "./components/templateTest.js";
 import * as match from"./components/matchingTest.js";
 import {fibonacci} from "./components/symbolTest.js";
 import {armstrong} from "./components/iteratorTest.js";
+import {promise} from "./components/promiseTest.js"
 
 /*
 document.write("Hemant Raj");
@@ -34,7 +35,7 @@ obj.next();
 obj.next();
 
 
-*/
+
 let itr=armstrong[Symbol.iterator]();
 console.log(itr.next());
 console.log(itr.next());
@@ -42,6 +43,9 @@ console.log(itr.next());
 console.log(itr.next());
 console.log(itr.next());
 //console.log(itr.next());
+*/
+
+promise();
 
 
 

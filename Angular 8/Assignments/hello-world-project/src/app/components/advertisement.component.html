@@ -1,0 +1,32 @@
+<div id="outer-div">
+    <div id="inner-div"><h1>Advertisement Details</h1></div>
+</div>
+<div id="formInput">
+    <form >
+        <label>Enter Title :</label>
+        <input #TitleID type="text" placeholder="Enter title" class="form-control"><br><br>
+        <label>Enter Name :</label>
+        <input #NameID type="text" placeholder="Enter name" class="form-control" > <br><br>
+        <label>Select Category :</label>
+        <select #CategoryID>  
+            <option *ngFor="let cat of categories">{{cat.name}} </option>  
+        </select>  <br><br>
+        <label>Enter Description :</label>
+        <input #DescriptionID type="text" placeholder="Enter description" class="form-control"><br><br>
+        <button type="submit" class="btn btn-primary" (click)=OnClickSubmit(TitleID.value,NameID.value,CategoryID.value,DescriptionID.value,$event)>Submit</button><br><br>
+    </form>
+</div>
+<div id="table">
+    <table class="TFtable" border="2px">  
+        <tr >  
+        <th>ID</th><th>Title</th> <th>Name</th> <th>Category</th> <th>Description</th>  
+        </tr>  
+        <tr *ngFor="let Prod of master"> 
+            <td>{{Prod.id}}</td>     
+            <td>{{Prod.title}}</td>  
+            <td>{{Prod.name}}</td>  
+            <td>{{Prod.category}}</td>  
+            <td>{{Prod.description}}</td>  
+        </tr>  
+    </table>
+</div>

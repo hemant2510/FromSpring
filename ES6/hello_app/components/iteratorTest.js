@@ -15,7 +15,7 @@ export let armstrong={
                     while(num!=0){
                         a=num%10;
                         num=Math.floor(num/10);
-                        sum=sum+(a*a*a);
+                        sum=sum+Math.pow(a,);
                     }
                     console.log("Sum : ",sum);
                     console.log("Dummy ",dummy);

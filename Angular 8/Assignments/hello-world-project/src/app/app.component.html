@@ -1,0 +1,6 @@
+<div>
+    <input type="text" placeholder="Parent textbox" #parentTextbox [value]="childData" >
+    <button type="submit" (click)=OnClickHandler()>Submit</button> 
+</div>
+<child [parentBox]= "click" (childEvent)="childData=$event"></child>
+<router-outlet></router-outlet>
