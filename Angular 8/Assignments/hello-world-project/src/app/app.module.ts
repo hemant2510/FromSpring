@@ -7,6 +7,7 @@ import { AdvertisementFormComponent } from './components/advertisement.component
 import { ColorDirective } from './directives/custom.directives';
 import {DirectiveComponent} from './components/directive.component';
 import { ChildComponent } from './components/child.component';
+import { CustomPipe } from './pipes/custom.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ChildComponent } from './components/child.component';
     AdvertisementFormComponent,
     ColorDirective,
     DirectiveComponent,
-    ChildComponent
+    ChildComponent,
+    CustomPipe
   ],
   imports: [
     BrowserModule,

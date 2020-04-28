@@ -3,4 +3,6 @@
     <button type="submit" (click)=OnClickHandler()>Submit</button> 
 </div>
 <child [parentBox]= "click" (childEvent)="childData=$event"></child>
+
+<div>{{ data | advertisement:'name':'chairs' | json}}</div>
 <router-outlet></router-outlet>

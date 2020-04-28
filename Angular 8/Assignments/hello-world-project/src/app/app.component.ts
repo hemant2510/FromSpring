@@ -14,4 +14,6 @@ export class AppComponent {
   OnClickHandler(){
     this.click="Parent Clicked"
   }
+
+  data:Array<any>=[{name:"chairs",price:'1000'},{name:"tables",price:"2000"}]
 }
